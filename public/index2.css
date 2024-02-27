@@ -1,26 +1,67 @@
 /* fonts */
+
+*{
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'vermin';
+  src: url(./fonts/vermin_vibes.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'pirate';
+  src: url(./fonts/JackPirateAltPersonalUse-ZVpO8.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'battle';
+  src: url(./fonts/BattlesbridgeDemo-AL126.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'debock';
+  src: url(./fonts/Debock-Personal-Use.otf) format('truetype');
+}
+
 .libre-barcode  {
     font-family: "Libre Barcode 39 Extended Text", system-ui;
     font-weight: 400;
     font-style: normal;
   }
-  
-.logo{
-height: 150;
-}
+  .bungee-shade-regular {
+    font-family: "Bungee Shade", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
 body{
-    background-image:url(./images/eye.jpg);
+    background-image:url(./images/mench.png);
     background-repeat: no-repeat;
-    background-position: 60em 40px;
-  background-size: 40%;
-  margin: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: static;
+    margin: 0;
   padding: 0;
+cursor: url('./images/billiken.png'),auto;
+
 
 }
-.body{
-    position: relative;
-    font-family: Hack,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 
+.logo{
+  padding-left: 2%;
+  height: 180px;
+
+}
+.logonav{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.logotext{
+  font-family: vermin;
+  color: #4878c0;
 }
 .navbar{
     background-color: rgba(0, 0, 0, 0);
@@ -35,17 +76,30 @@ body{
     justify-content: center;
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 15px;
+    height: 160px;
+  
     
 }
+
 .nav >li{
-    
      text-align: center;
     background-color: rgba(0, 0, 0, 0);
     color: white ;
     font-weight: bolder;
     font-family: Hack,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    overflow: visible;
+    
 }
+.nav >li :hover{
+  transform: scale(1.2) !important;
+overflow: visible;
+background-color: #ff1e1e43;
+}
+
+
+
+
 li a{
     display: block;
     text-align: center;
@@ -57,35 +111,31 @@ li a{
 .intro {
     font-size: 40px;
     color: rgb(255, 255, 255);
-    margin-left: 50PX;
-    margin-top: 10PX;
+    margin-left: 100PX;
 
-    font-weight: bolder;
+    width: 900px 
+}
+
+.moto{
+  font-size: 25px ;
+  font-family: Courier, 'Courier New', monospace; 
 }
 
 .invisible {
     visibility: hidden;
   }
   
-  .sixtyfour {
-    font-family: "Bungee Shade", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-      "BLED" 0,
-      "SCAN" 0;
-  }
-  
+
+
+
   
   .d{
     color: #ffffff;
   }
-  .parent {
-    display: grid;
-    padding: 80px;
-    align-items: center;
-    justify-content: center;
+  
+
+    .emptyh{
+      height: 200px;
     }
     
 
@@ -234,6 +284,11 @@ li a{
         justify-content: center; /* Center the slider horizontally */
         align-items: center;
     }
+    .fadeInUp{animation:fadeInUp 1s ease backwards;}
+    @keyframes fadeInUp{
+      0%{transform:translate(0px, 200px); opacity: 0;}
+      100%{transform:translate(0px, 0); opacity: 1;}
+    }
     .item{
         position: absolute;
         width: 500px;
@@ -251,12 +306,12 @@ li a{
     
     #next{
         position: absolute;
-        right: 50px;
+        right: 250px;
         top: 40%;
     }
     #prev{
         position: absolute;
-        left: 50px;
+        left: 250px;
         top: 40%;
     }
     #prev, #next{
@@ -292,29 +347,48 @@ li a{
     
       .profile-container {
         display: flex;
-        flex-wrap: wrap;
+        gap: 50px;
+        width: 100%;
         justify-content: center; /* Align profiles in the center horizontally */
+    
       }
       
       .profile {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
-        margin-right: 20px; /* Adjust spacing between profiles */
         margin-bottom: 20px;
-      }
+        width: 400px;
+
+        height: 500px;
+  
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.21);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6.8px);
+-webkit-backdrop-filter: blur(6.8px);
+border: 1px solid rgba(255, 255, 255, 0.29);              }
       
       .profile-image {
-        width: 150px;
-        height: 150px;
+        width: 230px;
+        height: 230px;
         object-fit: cover;
         border-radius: 50%;
-        margin-bottom: 10px;
+        border-color: #69a7f0;
+        border-style: solid;
+        border-width: 5px;
+        padding: 20px;
+        object-fit: cover;
+        object-position: 0 0% ;
+
       }
       
       .profile-text {
-        text-align: center;
+        text-align: left;
         color: white;
+        width:300px;
       }
       
       .profile-name {
@@ -327,3 +401,177 @@ li a{
         font-size: 16px;
         color: #666;
       }
+
+   .icons{
+    background-color: #69a7f0;
+    color: #1d1b1b;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+   }
+
+   .typing{
+    font-size:30px 
+   }
+
+   .parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+   }
+   .div1{
+    background-color: #000000;
+    width: 60%;
+    min-height: 300px;
+    background: rgba(0, 0, 0, 0.134);
+-webkit-backdrop-filter: blur(17px);
+backdrop-filter: blur(17px);
+border: 1px solid rgba(220,78,58,0.125);
+font-family: Courier, 'Courier New', monospace; 
+color: white;
+padding: 20px;
+
+
+   }
+
+   .div1 h1{
+    text-align: center;
+   }
+#menu{
+  display: none;
+}
+
+*{
+  overflow-x: hidden;
+}
+
+
+
+
+
+
+  /* responsiveness */
+  @media only screen and (orientation: portrait) {
+
+    .logo{
+      height: 95px;
+    }
+  
+    .navbar{
+      display: flex;
+      flex-direction: column;
+   
+}
+
+.nav{
+ display:none ;
+}
+.typing{
+  font-size: 15px;
+  width: 1000px;
+
+}
+.intro{
+  margin-left: 20px;
+  font-size: 10px;
+  width: 90%;
+}
+.moto{
+  font-size: 18px;
+  width: 500px;
+}
+.moto2{
+  display: none;}
+
+
+.logonav{
+  display: flex;
+  justify-content: space-between;
+}
+.logotext{
+display: none;
+}
+
+
+#cursor{
+  font-size: 20px;
+}
+.slider{
+  position: relative;
+  width: 400px;
+  height: 370px;
+  display: flex; /* Center the slider horizontally */
+  justify-content: center; /* Center the slider horizontally */
+  align-items: center;
+}
+.item{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  text-align: justify;
+  background-color: #ffffff00;
+  border-radius: 10px;
+  padding: 20px;
+  transition:  0.5s;
+  left: calc(38% - 110px);
+  display: flex;
+  flex-direction: column;
+  
+}
+.text-content{
+  overflow: visible;
+}
+#next{
+right: 0;
+  z-index:1;
+  top: 20%;
+}
+
+#prev{
+  z-index: 1;
+left: 0;
+top: 20%;
+}
+
+.profile-container{
+  display: flex;
+  flex-direction: column;
+  left: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.profile-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border-color: #69a7f0;
+  border-style: solid;
+  border-width: 5px;
+  padding: 20px;
+
+}
+.parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .div1{
+  width: 70%;
+  height: 300px;
+
+ }
+
+ #menu{
+  display: block;
+  font-size: 25px;
+  color: #1eff8e;
+  overflow: visible;
+  margin-right: 40px;
+ }
+ 
+
+
+  }
+

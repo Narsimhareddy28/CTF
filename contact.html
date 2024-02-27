@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <!-- Add favicons -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Add your CSS file or style tag here -->
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<body>
+    
+    <section id="contact">
+        <div class="contact-box">
+          <div class="contact-links">
+            <h2>CONTACT US</h2> 
+            <div class="links">
+              <div class="link">
+                <a href="https://www.linkedin.com/school/saint-louis-university/"><img src="https://i.postimg.cc/m2mg2Hjm/linkedin.png" alt="linkedin"></a>
+              </div>
+              <div class="link">
+                <a href="https://github.com/Saint-Louis-University"><img src="https://i.postimg.cc/YCV2QBJg/github.png" alt="github"></a>
+              </div>
+              <div class="link">
+                <a href="mailto:cyberbillikens@gmail.com"><img src="https://i.postimg.cc/NjLfyjPB/email.png" alt="email"></a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form-wrapper">
+           <form action="https://formspree.io/f/xoqgdbeo"method="POST">
+                <div class="form-item">
+                    <input type="text" name="sender" id="sender" required>
+                    <label for="sender">Name:</label>
+                </div>
+                <div class="form-item">
+                    <input type="text" name="email" id="email" required>
+                    <label for="email">Email:</label>
+                </div>
+                <div class="form-item">
+                    <input type="text" name="phone" id="phone" required>
+                    <label for="phone">Phone:</label>
+                </div>
+                <div class="form-item">
+                    <textarea class="" name="message" id="message" required></textarea>
+                    <label for="message">Message:</label>
+                </div>
+                <button type="submit" class="submit-btn">Send</button>
+            </form>
+            <div class="button-container">
+                <button type="button" class="reset-btn" onclick="location.reload()">Reset</button>
+            </div>            
+          </div>
+        </div>
+
+      </section>
+
+
+      <div class="accordion">
+        <details>
+         <p>Capture the Flag (CTF) is like a digital scavenger hunt for hackers. Instead of a physical flag, they hunt for hidden digital strings stored in files or databases. It's a fun way for ethical hackers to learn by solving challenges individually or as teams. Each flag they find earns points based on its difficulty. CTF training turns cybersecurity education into an engaging game, reinforcing learning and promoting skill development.</p>
+         <summary>
+          <h3>What is Capture the Flag (CTF) Training</h3>
+         </summary>
+        </details>
+        <details>
+         <p>CTF training for ethical hackers is like a skill-building gym. It pushes solo players to collaborate, team players to explore solo work, and all to learn from each other. Challenges with points let you track your progress, while the game format keeps learning fun and engaging. It's a dynamic way to master various hacking skills you might not otherwise explore.</p>
+         <summary>
+          <h3>What is the purpose of the CTF training</h3>
+         </summary>
+        </details>
+        <details>
+         <p>
+          Want to hack your way to better skills? CTF competitions offer diverse training grounds. Go head-to-head in Attack-Defense races, strategize in Red vs. Blue battles, solve category-based challenges in Jeopardy-style, analyze captured data in Packet Capture, or navigate the dynamic Mixed CTF, where attacks and defenses clash. Each competition style pushes you in unique ways, helping you discover your hacking strengths and master new techniques. Find your perfect training ground and level up your skills!</p>
+         <summary>
+          <h3>What Are Some Types of CTF Competitions?
+          </h3>
+         </summary>
+        </details>
+       </div>
+
+      <script src="contact.js"></script>
+</body>
+</html>
